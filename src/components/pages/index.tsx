@@ -14,6 +14,17 @@ const options: Highcharts.Options = {
   xAxis: {
     // 横軸
     categories: ['A', 'B', 'C'],
+    title: {
+      align: 'high',
+      text: '年度',
+    },
+  },
+  yAxis: {
+    title: {
+      align: 'high',
+      text: '人口数',
+      rotation: 360,
+    },
   },
   series: [
     {
