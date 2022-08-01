@@ -48,6 +48,19 @@ export const App = (props: HighchartsReact.Props) => {
   const chartComponentRef = useRef<HighchartsReact.RefObject>(null)
 
   return (
-    <HighchartsReact highcharts={Highcharts} options={options} ref={chartComponentRef} {...props} />
+    <>
+      <div>
+        <label htmlFor=''>
+          <input type='checkbox' name='' id='' />
+          東京
+        </label>
+      </div>
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={options}
+        ref={chartComponentRef}
+        {...props}
+      />
+    </>
   )
 }
