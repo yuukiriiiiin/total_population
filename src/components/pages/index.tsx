@@ -50,17 +50,14 @@ export const App = (props: HighchartsReact.Props) => {
   return (
     <>
       <div>
-        <label htmlFor=''>
-          <input type='checkbox' name='' id='' />
-          東京
-        </label>
+        {props.final.map((d, i) => (
+          <label htmlFor='' key={d.prefCode}>
+            <input type='checkbox' name='' id='' />
+            {d.prefName}
+          </label>
+        ))}
       </div>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={options}
-        ref={chartComponentRef}
-        {...props}
-      />
+      <HighchartsReact highcharts={Highcharts} options={options} ref={chartComponentRef} />
     </>
   )
 }
